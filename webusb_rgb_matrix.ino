@@ -1,14 +1,13 @@
 #include "Adafruit_TinyUSB.h"
 #include <Adafruit_NeoPixel.h>
 
-#define PIN_NEOPIXEL 15
-#define NEOPIXEL_NUM 256
+#define PIN_NEOPIXEL 6
+#define NEOPIXEL_NUM 16*16
 #define NEOPIXEL_WEBUSB_LENGTH NEOPIXEL_NUM * 3
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NEOPIXEL_NUM, PIN_NEOPIXEL, NEO_GRB + NEO_KHZ800);
 
 Adafruit_USBD_WebUSB webUSB;
-
 WEBUSB_URL_DEF(landingPage, 1, "webusb-rgb-matrix.nico.dev");
 
 void setup() {
